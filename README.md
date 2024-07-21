@@ -13,6 +13,8 @@ Option - Filemanager - execute 'setup_synth.sh' to setup, you have to enable wif
 **use**  
 Connect MIDI Keyboard or Pad to Game OTG port.  
 Option - Filemanager - execute 'start_synth.sh' to start.  
+You'll see application suddenly quit, but synth is resident on system.
+  
 Option - Filenamgaer - execute 'stop_synth.sh' to stop.  
 
 Defaut soundfont file is /usr/share/sounds/sf3/default-GM.sf3  
