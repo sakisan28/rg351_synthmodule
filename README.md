@@ -21,7 +21,7 @@ Defaut soundfont file is /usr/share/sounds/sf3/default-GM.sf3
 If you have another file, you can rewrite path in start_synth.sh .  
 
 **link**  
-FluidSynth (https://www.fluidsynth.org/)[https://www.fluidsynth.org/]  
+FluidSynth [https://www.fluidsynth.org/](https://www.fluidsynth.org/)  
 
 ----
 RG351 やそれに類するゲーム機 (aka 中華ゲーム機)をMIDI音源モジュールにする  
