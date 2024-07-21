@@ -1,5 +1,5 @@
 # rg351_synthmodule
-Portable game console become synthesizer module
+Portable game console become a synthesizer module
 for ArkOS.
 
 Put 1Synth folder to /roms or /roms2.
