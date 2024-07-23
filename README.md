@@ -1,15 +1,15 @@
 # rg351_synthmodule
-Portable game console become a synthesizer module
-for ArkOS.
+Portable game console become a synthesizer module  
+for ArkOS.  
+
+WIFI required.
 
 Put 1Synth folder to /roms or /roms2.
 
 **install**  
-If your Game colsole have 'KODI menu' (RK3566 devices), no need to install.  
-  
-No 'KODI', try following:  
-Option - Filemanager - execute 'setup_synth.sh' to setup, you have to enable wifi before setup.  
-  
+Enable WIFI and update ArkOS.  
+FluidSynth and sondfonts are installed.  
+   
 **use**  
 Connect MIDI Keyboard or Pad to Game OTG port.  
 Option - Filemanager - execute 'start_synth.sh' to start.  
@@ -27,19 +27,15 @@ FluidSynth [https://www.fluidsynth.org/](https://www.fluidsynth.org/)
 RG351 やそれに類するゲーム機 (aka 中華ゲーム機)をMIDI音源モジュールにする  
   
 ArkOSが必要です。  
-
 fluidsynth を起動して、MIDI デバイスと接続するスクリプトです。  
   
 1Synth フォルダを /roms か /roms2 にコピーしてください。  
   
 **インストール**  
-もしArkOSのメニューに KODI があったら (RK3566 CPUを搭載した機種) fluidsynth はシステムにインストールされているので
-インストールは不要です。  
-
-KODI が無く、インストールする場合は：  
-事前に WIFI を有効にしておいてください。  
-Option - Filemanager から'setup_synth.sh' を Execute するとインストールされます。  
-
+WIFIの接続が必要です。  
+WIFIを有効にして、ArkOSをアップデートしてください。    
+FluidSynth と soundfont がインストールされます。  
+  
 **使用**  
 MIDI キーボード / パッドをゲーム機のOTGポートに接続します。  
 Option - Filemanager から 'start_synth.sh' を Execute すると起動します。  
