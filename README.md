@@ -6,11 +6,10 @@ WIFI required.
 
 Put 1Synth folder to /roms/ports or /roms2/ports : ArkOS.  
 Put 1Synth folder to /storage/roms/ports : ROCKNIX.  
-Set Emulationstation [SYSTEM SETTINGS]-[
    
 **use**  
 Connect MIDI Keyboard or Pad to Game OTG port.  
-Option - Filemanager - execute 'start_synth.sh' to start.  
+Option - Filemanager - execute 'start_synth.sh' or 'start_synth_ROCKNIX.sh' to start.  
 You'll see application suddenly quit, but synth is resident on system.
   
 Option - Filenamgaer - execute 'stop_synth.sh' to stop.  
@@ -24,14 +23,15 @@ FluidSynth [https://www.fluidsynth.org/](https://www.fluidsynth.org/)
 ----
 RG351 やそれに類するゲーム機 (aka 中華ゲーム機)をMIDI音源モジュールにする  
   
-ArkOSが必要です。  
+ArkOS もしくは ROCKNIX が必要です。  
 fluidsynth を起動して、MIDI デバイスと接続するスクリプトです。  
   
-1Synth フォルダを /roms か /roms2 にコピーしてください。  
+1Synth フォルダを /roms/ports か /roms2/ports にコピーしてください。ArkOS  
+1Synth フォルダを /storage/roms/ports にコピーしてください。ROCKNIX  
     
 **使用**  
 MIDI キーボード / パッドをゲーム機のOTGポートに接続します。  
-Option - Filemanager から 'start_synth.sh' を Execute すると起動します。  
+Option - Filemanager から 'start_synth.sh' を Execute すると起動します。 ROCKNIXの場合は start_synth_ROCKNIX を使います。    
 一見、すぐに終了してしまうように見えますが、音源はシステムに常駐しています。  
   
 Option - Filenamgaer から 'stop_synth.sh' を Execute すると終了します。  
