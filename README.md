@@ -1,14 +1,12 @@
 # rg351_synthmodule
 Portable game console become a synthesizer module  
-for ArkOS.  
+for ArkOS and ROCKNIX.  
 
-WIFI required.
+WIFI required.  
 
-Put 1Synth folder to /roms or /roms2.
-
-**install**  
-Enable WIFI and update ArkOS.  
-FluidSynth and sondfonts are installed.  
+Put 1Synth folder to /roms/ports or /roms2/ports : ArkOS.  
+Put 1Synth folder to /storage/roms/ports : ROCKNIX.  
+Set Emulationstation [SYSTEM SETTINGS]-[
    
 **use**  
 Connect MIDI Keyboard or Pad to Game OTG port.  
@@ -30,12 +28,7 @@ ArkOSが必要です。
 fluidsynth を起動して、MIDI デバイスと接続するスクリプトです。  
   
 1Synth フォルダを /roms か /roms2 にコピーしてください。  
-  
-**インストール**  
-WIFIの接続が必要です。  
-WIFIを有効にして、ArkOSをアップデートしてください。    
-FluidSynth と soundfont がインストールされます。  
-  
+    
 **使用**  
 MIDI キーボード / パッドをゲーム機のOTGポートに接続します。  
 Option - Filemanager から 'start_synth.sh' を Execute すると起動します。  
