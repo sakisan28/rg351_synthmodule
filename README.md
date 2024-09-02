@@ -21,7 +21,7 @@ If you have another file, you can rewrite path in start_synth.sh .
 FluidSynth [https://www.fluidsynth.org/](https://www.fluidsynth.org/)  
   
   
-**pgmchanger**  
+**pgmchanger** (ArkOS only)  
 Program change tool.  
 After boot FluidSynth, run pgmchanger.sh by Filenamager.  
 To launch this app, use FileManager, EmulationStation's ports menu may not work.  
@@ -53,7 +53,7 @@ fluidsynth はマルチティンバーで動作しているので、MIDI CHを�
 
 ..まあ、ものすごくやる気のない、簡単なスクリプトですが、使ってみると結構楽しいです :-)  
   
-**pgmchanger**  
+**pgmchanger** (ArkOSのみ)  
 プログラムチェンジ用アプリ、pgchanger  
 start_synth.sh を実行して、シンセが立ち上がった後に、pgmchanger.sh を FileManger から起動してください。  
 ports メニューからだとうまく動作しません。  
