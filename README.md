@@ -19,7 +19,13 @@ If you have another file, you can rewrite path in start_synth.sh .
 
 **link**  
 FluidSynth [https://www.fluidsynth.org/](https://www.fluidsynth.org/)  
-
+  
+  
+**pgmchanger**  
+Program change tool.  
+After boot FluidSynth, run pgmchanger.sh by Filenamager.  
+To launch this app, use FileManager, EmulationStation's port menu may not work.  
+  
 ----
 RG351 やそれに類するゲーム機 (aka 中華ゲーム機)をMIDI音源モジュールにする  
   
@@ -44,4 +50,9 @@ Option - Filenamgaer から 'stop_synth.sh' を Execute すると終了します
 fluidsynth はマルチティンバーで動作しているので、MIDI CHを変えれば、別CHを鳴らすことができます。プログラムチェンジなどで音色を変えられますが、GMやXGなどの soundfont ファイルの内部の作りによって変え方は変わります。 CC91でリバーブ、CC93でコーラスが掛けられます。  
 
 
-..まあ、ものすごくやる気のない、簡単なスクリプトですが、使ってみると結構楽しいです :-)
+..まあ、ものすごくやる気のない、簡単なスクリプトですが、使ってみると結構楽しいです :-)  
+  
+**pgmchanger**  
+プログラムチェンジ用アプリ、pgchanger  
+start_synth.sh を実行して、シンセが立ち上がった後に、pgmchanger.sh を FileManger から起動してください。  
+ports メニューからだとうまく動作しません。  
