@@ -39,6 +39,7 @@ fluidsynth を起動して、MIDI デバイスと接続するスクリプトで�
 MIDI キーボード / パッドをゲーム機のOTGポートに接続します。  
 Option - Filemanager から 'start_synth.sh' を Execute すると起動します。 ROCKNIXの場合は start_synth_ROCKNIX を使います。    
 一見、すぐに終了してしまうように見えますが、音源はシステムに常駐しています。  
+原因がよくわからないのですが、時々起動しないことがあります。その場合はゲーム機を再起動してください。  
   
 Option - Filenamgaer から 'stop_synth.sh' を Execute すると終了します。  
 特に保存しなければならないデータはないので、ゲーム機自体を終了させてもかまいません。  
