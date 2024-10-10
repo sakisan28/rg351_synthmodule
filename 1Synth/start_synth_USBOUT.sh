@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-USBDEV=$(aplay -l|grep '\[USB Audio\]'|grep -v 'M8 \[M8\]'|awk '{print $3;exit}')
+USBDEV=$(aplay -l|grep '\[USB Audio\]' | awk '{print $3;exit}')
 
 fluidsynth -s -i -a alsa -o audio.alsa.device=hw:${USBDEV},0 -m alsa_seq -g 1.0 /usr/share/sounds/sf2/FluidR3_GM.sf2 &
 #fluidsynth -s -i -a alsa -o audio.alsa.device=hw:rockchiprk817co,0 -m alsa_seq -g 1.0 /usr/share/sounds/sf3/default-GM.sf3 &
