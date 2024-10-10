@@ -157,7 +157,7 @@ int main(int argc, char *argv[])
 	if (dest < 0 || dest > 255)
 		abort();
 	
-	SDL_Init(SDL_INIT_TIMER | SDL_INIT_JOYSTICK | SDL_INIT_GAMECONTROLLER | SDL_INIT_VIDEO);
+	SDL_Init(SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER | SDL_INIT_VIDEO);
 	pdc_window = SDL_CreateWindow("pgmchanger", SDL_WINDOWPOS_UNDEFINED, 
 		SDL_WINDOWPOS_UNDEFINED, 640, 480, 0);
 	pdc_screen = SDL_GetWindowSurface(pdc_window);
@@ -172,8 +172,6 @@ int main(int argc, char *argv[])
 
 	init_screen();
 
-
-	joy = SDL_JoystickOpen(0);
 
 	SDL_GameControllerAddMappingsFromFile("gamecontrollerdb.txt");
 	con = SDL_GameControllerOpen(0);
@@ -361,7 +359,6 @@ int main(int argc, char *argv[])
 	}
 
 	SDL_GameControllerClose(con);
-	SDL_JoystickClose(joy);
 	SDL_Quit();
 	quit_screen();
 	return 0;
