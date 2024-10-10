@@ -14,19 +14,22 @@
 // L3:11 R3:12
 // U:13 D:14 L:15 R:16
 
+/*
 int GM_ON_LEN = 6;
 char GM_ON[] = { 0xf0, 0x7e, 0x7f, 0x09, 0x01, 0xf7 };
 int XG_ON_LEN = 9;
 char XG_ON[] = { 0xf0, 0x43, 0x10, 0x4c, 0, 0, 0x7e, 0, 0xf7};
+*/
 
 char buf[4];
 
-
+/*
 enum {
 	BTN_B, BTN_A, BTN_X, BTN_Y, BTN_L1, BTN_R1, BTN_L2, BTN_R2, BTN_SEL, BTN_STA,
 	BTN_L3 = 11, BTN_R3,
 	BTN_U = 13, BTN_D, BTN_L, BTN_R
 };
+*/
 
 #define ERRCHECK(ret) if(ret < 0) { printf("%s\n", snd_strerror(ret)); abort();};
 
@@ -88,22 +91,28 @@ void init_screen(void)
 	mvprintw( 7, 20, "BANK(LSB)");
 	mvprintw( 9,  1, "[L1]/[R1]");
 	mvprintw( 9, 20, "REVERB");
+/*
 	mvprintw(11,  1, "[L2]/[R2]");
 	mvprintw(11, 20, "CHORUS");
+*/
 	mvprintw(13,  1, "[A]");
 	mvprintw(13, 20, "TEST TONE");
 	mvprintw(15,  1, "[B]");
 	mvprintw(15, 20, "QUIT");
+/*
 	mvprintw(19,  1, "[L3]");
 	mvprintw(19, 20, "ALL NOTES OFF");
 	mvprintw(21,  1, "[R3]");
 	mvprintw(21, 20, "XG ON");
+*/
 	print_ch(0);
 	print_pgm(0);
 	print_msb(0);
 	print_lsb(0);
 	print_rev(0);
+/*
 	print_cho(0);
+*/
 	refresh();
 }
 
@@ -168,7 +177,7 @@ int main(int argc, char *argv[])
 
 	SDL_GameControllerAddMappingsFromFile("gamecontrollerdb.txt");
 	con = SDL_GameControllerOpen(0);
-	printf("\ndebug:: joy:%d,con:%d,%s\n", (int)joy, (int)con, SDL_GetError());
+	//printf("\ndebug:: joy:%d,con:%d,%s\n", (int)joy, (int)con, SDL_GetError());
 
 
 	ret = snd_seq_open(&seq, "default", SND_SEQ_OPEN_OUTPUT, SND_SEQ_NONBLOCK);
@@ -189,13 +198,13 @@ int main(int argc, char *argv[])
 	quit = 0;
 	while (!quit) {
 		while(SDL_PollEvent(&event)) {
-			if (event.type == SDL_JOYBUTTONDOWN) {
-				switch (event.jbutton.button) {
-					case BTN_B:
+			if (event.type == SDL_CONTROLLERBUTTONDOWN) {
+				switch (event.cbutton.button) {
+					case SDL_CONTROLLER_BUTTON_B:
 					//quit
 						quit = TRUE;
 						break;
-					case BTN_A:
+					case SDL_CONTROLLER_BUTTON_A:
 					//test tone
 						if (ch == 9){
 							snd_seq_ev_set_noteon(&ev, ch, 38, 100);
@@ -205,19 +214,19 @@ int main(int argc, char *argv[])
 						snd_seq_event_output(seq, &ev);
 						snd_seq_drain_output(seq);
 						break;
-					case BTN_SEL:
+					case SDL_CONTROLLER_BUTTON_BACK:
 					//ch dec
 						if (--ch < 0)
 							ch = 0;
 						print_ch(ch);
 						break;
-					case BTN_STA:
+					case SDL_CONTROLLER_BUTTON_START:
 					//ch inc
 						if (++ch > 15)
 							ch = 15;
 						print_ch(ch);
 						break;
-					case BTN_D:
+					case SDL_CONTROLLER_BUTTON_DPAD_DOWN:
 					//pgm dec
 						if (--pgm < 0)
 							pgm = 0;
@@ -226,7 +235,7 @@ int main(int argc, char *argv[])
 						snd_seq_event_output(seq, &ev);
 						snd_seq_drain_output(seq);
 						break;
-					case BTN_U:
+					case SDL_CONTROLLER_BUTTON_DPAD_UP:
 					//pgm inc
 						if (++pgm > 127)
 							pgm = 127;
@@ -235,7 +244,7 @@ int main(int argc, char *argv[])
 						snd_seq_event_output(seq, &ev);
 						snd_seq_drain_output(seq);
 						break;
-					case BTN_L:
+					case SDL_CONTROLLER_BUTTON_DPAD_LEFT:
 					//msb dec
 						if (--msb < 0)
 							msb = 0;
@@ -244,7 +253,7 @@ int main(int argc, char *argv[])
 						snd_seq_event_output(seq, &ev);
 						snd_seq_drain_output(seq);
 						break;
-					case BTN_R:
+					case SDL_CONTROLLER_BUTTON_DPAD_RIGHT:
 					//msb inc
 						if (++msb > 127)
 							msb = 127;
@@ -253,7 +262,7 @@ int main(int argc, char *argv[])
 						snd_seq_event_output(seq, &ev);
 						snd_seq_drain_output(seq);
 						break;
-					case BTN_Y:
+					case SDL_CONTROLLER_BUTTON_Y:
 					//msb dec
 						if (--lsb < 0)
 							lsb = 0;
@@ -262,7 +271,7 @@ int main(int argc, char *argv[])
 						snd_seq_event_output(seq, &ev);
 						snd_seq_drain_output(seq);
 						break;
-					case BTN_X:
+					case SDL_CONTROLLER_BUTTON_X:
 					//msb inc
 						if (++lsb > 127)
 							lsb = 127;
@@ -271,7 +280,7 @@ int main(int argc, char *argv[])
 						snd_seq_event_output(seq, &ev);
 						snd_seq_drain_output(seq);
 						break;
-					case BTN_L1:
+					case SDL_CONTROLLER_BUTTON_LEFTSHOULDER:
 					//rev dec
 						rev -= 8;
 						if (rev < 0)
@@ -281,7 +290,7 @@ int main(int argc, char *argv[])
 						snd_seq_event_output(seq, &ev);
 						snd_seq_drain_output(seq);
 						break;
-					case BTN_R1:
+					case SDL_CONTROLLER_BUTTON_RIGHTSHOULDER:
 					//rev inc
 						rev += 8;
 						if (rev == 8)
@@ -293,7 +302,8 @@ int main(int argc, char *argv[])
 						snd_seq_event_output(seq, &ev);
 						snd_seq_drain_output(seq);
 						break;
-					case BTN_L2:
+/*
+					case SDL_CONTROLLER_BUTTON_PADDLE1:
 					//cho dec
 						cho -= 8;
 						if (cho < 0)
@@ -303,7 +313,7 @@ int main(int argc, char *argv[])
 						snd_seq_event_output(seq, &ev);
 						snd_seq_drain_output(seq);
 						break;
-					case BTN_R2:
+					case SDL_CONTROLLER_BUTTON_PADDLE2:
 					//cho inc
 						cho += 8;
 						if (cho == 8)
@@ -331,10 +341,11 @@ int main(int argc, char *argv[])
 						snd_seq_event_output(seq, &ev);
 						snd_seq_drain_output(seq);
 						break;
+*/
 				}
-			} else if (event.type == SDL_JOYBUTTONUP) {
-				switch (event.jbutton.button) {
-					case BTN_A:
+			} else if (event.type == SDL_CONTROLLERBUTTONUP) {
+				switch (event.cbutton.button) {
+					case SDL_CONTROLLER_BUTTON_A:
 						if (ch == 9){
 							snd_seq_ev_set_noteoff(&ev, ch, 38, 0);
 						} else {
@@ -349,6 +360,7 @@ int main(int argc, char *argv[])
 
 	}
 
+	SDL_GameControllerClose(con);
 	SDL_JoystickClose(joy);
 	SDL_Quit();
 	quit_screen();
