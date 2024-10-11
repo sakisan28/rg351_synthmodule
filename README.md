@@ -2,8 +2,6 @@
 Portable game console become a synthesizer module  
 for ArkOS and ROCKNIX.  
 
-WIFI required.  
-
 Put 1Synth folder to /roms/tools or /roms/ports : ArkOS.  
 Put 1Synth folder to /storage/roms/ports : ROCKNIX.  
    
