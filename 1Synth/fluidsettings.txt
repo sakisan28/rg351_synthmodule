@@ -32,7 +32,7 @@ set synth.reverb.width 20.0
 #MIDI channel set to 1-10
 #router_chan 0 9 1 0
 #MIDI channel set to 7-10
-#router_chan 6 9 1 0 : min:(6+1)*1+0, max:(9+1)*1+0
+#router_chan 6 9 1 0 : min:6*1+0, max:9*1+0 (to valid MIDI SPEC +1)
 
 router_clear
 router_begin note
