@@ -11,11 +11,13 @@ load /usr/share/sounds/sf2/FluidR3_GM.sf2
 
 #Boot souud. If you don't like, remove 'noteon' lines.
 
-noteon 0 65 80
-noteon 0 69 80
-noteon 0 72 80
-noteon 0 79 80
+prog 0 32
+noteon 0 53 80
+noteon 0 57 80
+noteon 0 60 80
+noteon 0 67 80
 noteon 9 38 100
+prog 0 0
 
 
 #gain 0.0 to 10.0 (default:0.2)
