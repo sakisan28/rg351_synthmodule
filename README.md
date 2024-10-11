@@ -64,4 +64,3 @@ fluidsynth はマルチティンバーで動作しているので、MIDI CHを�
 **ROCKNIX で使う場合 A, B ボタンが逆になります**  
 プログラムチェンジ用アプリ、pgchanger  
 start_synth.sh を実行して、シンセが立ち上がった後に、pgmchanger を起動してください。  
-ports メニューからだとうまく動作しません。  portsに置いた場合は Options -FileManager から Execute できます。  
