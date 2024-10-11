@@ -26,7 +26,8 @@ If you have another file, you can rewrite path in fluidsettings.txt .
 FluidSynth [https://www.fluidsynth.org/](https://www.fluidsynth.org/)  
   
   
-**pgmchanger** (ArkOS only)  
+**pgmchanger**  
+On ROCKNIX environment, A and B button reversed.   
 Program change tool.  
 After boot FluidSynth, run pgmchanger.sh by Filenamager.  
 To launch this app, use FileManager, EmulationStation's ports menu may not work.  
@@ -62,7 +63,8 @@ fluidsynth はマルチティンバーで動作しているので、MIDI CHを�
 
 ..まあ、ものすごくやる気のない、簡単なスクリプトですが、使ってみると結構楽しいです :-)  
   
-**pgmchanger** (ArkOSのみ)  
+**pgmchanger**  
+**ROCKNIX で使う場合 A, B ボタンが逆になります**  
 プログラムチェンジ用アプリ、pgchanger  
 start_synth.sh を実行して、シンセが立ち上がった後に、pgmchanger を起動してください。  
 ports メニューからだとうまく動作しません。  portsに置いた場合は Options -FileManager から Execute できます。  
