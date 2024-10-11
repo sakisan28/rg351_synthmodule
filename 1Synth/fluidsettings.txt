@@ -1,9 +1,6 @@
 #reference: https://github.com/FluidSynth/fluidsynth/wiki/UserManual
 #           https://www.fluidsynth.org/api/fluidsettings.xml
 
-#rate use 11050 to LOFI sound! 8000.0-96000.0 (default:44100)
-set synth.sample-rate 44100.0
-
 #Sound font full path
 #If filename has space, quote by '' or escape by \
 #load /roms2/ports/'GeneralUser GS v1.471.sf2'
