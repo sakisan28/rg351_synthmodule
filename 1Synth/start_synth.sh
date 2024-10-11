@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-fluidsynth -s -i -a alsa -o audio.alsa.device=hw:rockchiprk817co,0 -m alsa_seq -f $(dirname $0)/fluidsettings.txt &
+fluidsynth -s -i -a alsa -o audio.alsa.device=hw:rockchiprk817co -m alsa_seq -f $(dirname $0)/fluidsettings.txt &
 sleep 5
 
 fluid=$(aconnect -o -l | awk '/FLUID/{ print substr($2,1,length($2)-1);exit }')
