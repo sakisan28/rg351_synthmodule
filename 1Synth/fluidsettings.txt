@@ -54,3 +54,14 @@ router_begin pbend
 router_chan 0 9 1 0
 router_end
 router_add
+
+router_begin cpress
+router_chan 0 9 1 0
+router_end
+router_add
+
+router_begin kpress
+router_chan 0 9 1 0
+router_end
+router_add
+
