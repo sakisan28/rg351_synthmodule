@@ -20,7 +20,7 @@ or
 Option - FileManager - Execute 'stop_synth.sh' to stop.  
   
 Defaut soundfont file is /usr/share/sounds/sf3/default-GM.sf3  
-If you have another file, you can rewrite path in start_synth.sh .  
+If you have another file, you can rewrite path in fluidsettings.txt .  
 
 **link**  
 FluidSynth [https://www.fluidsynth.org/](https://www.fluidsynth.org/)  
@@ -54,7 +54,7 @@ Option - Filenamgaer から 'stop_synth.sh' を Execute すると終了します
 特に保存しなければならないデータはないので、ゲーム機自体を終了させてもかまいません。  
 
 このスクリプトのデフォルトの soundfont は /usr/share/sounds/sf2/FluidR3_GM.sf3 です。fluidsynth パッケージのインストール時に自動的にインストールされます。  
-別のものを持っている場合は、1Synth と同じ場所にでもファイルをコピーして、start_synth.sh の中で指定すると
+別のものを持っている場合は、1Synth と同じ場所にでもファイルをコピーして、fluidsettings.txt の中で指定すると
 使うことができます。スペースの入ったファイル名を使う場合は /roms/1Synth/'this is file.sf2' のように「'」でくくるか、/roms/1Synth/this\ is\ file.sft のように「\」でエスケープしてください。  
 
 fluidsynth はマルチティンバーで動作しているので、MIDI CHを変えれば、別CHを鳴らすことができます。プログラムチェンジなどで音色を変えられますが、GMやXGなどの soundfont ファイルの内部の作りによって変え方は変わります。 CC91でリバーブ、CC93でコーラスが掛けられます。  
