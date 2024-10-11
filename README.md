@@ -27,10 +27,9 @@ FluidSynth [https://www.fluidsynth.org/](https://www.fluidsynth.org/)
   
   
 **pgmchanger**  
-On ROCKNIX environment, A and B button reversed.   
 Program change tool.  
 After boot FluidSynth, run pgmchanger.sh by Filenamager.  
-To launch this app, use FileManager, EmulationStation's ports menu may not work.  
+On ROCKNIX environment, A and B button reversed.   
   
 ----
 RG351 やそれに類するゲーム機 (aka 中華ゲーム機)をMIDI音源モジュールにする  
