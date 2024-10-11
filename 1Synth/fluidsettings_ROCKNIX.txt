@@ -1,0 +1,68 @@
+#reference: https://github.com/FluidSynth/fluidsynth/wiki/UserManual
+#           https://www.fluidsynth.org/api/fluidsettings.xml
+
+#Sound font full path
+#If filename has space, quote by '' or escape by \
+#load /roms2/ports/'GeneralUser GS v1.471.sf2'
+
+load /usr/share/soundfonts/GeneralUser.sf2
+
+
+#Boot souud. If you don't like, remove 'noteon' lines.
+
+prog 0 32
+noteon 0 53 80
+noteon 0 57 80
+noteon 0 60 80
+noteon 0 67 80
+noteon 9 38 100
+prog 0 0
+
+
+#gain 0.0 to 10.0 (default:0.2)
+gain 1.0
+
+
+#reverb room-size 0.0-1.0 (default: 0.5)
+set synth.reverb.room-size 0.8
+
+
+#reverb width 0.0-100.0 (default: 0.8)
+set synth.reverb.width 20.0
+
+#MIDI channel set to 1-10
+#router_chan 0 9 1 0
+#MIDI channel set to 7-10
+#router_chan 6 9 1 0 : min:6*1+0, max:9*1+0 (to valid MIDI SPEC +1)
+
+router_clear
+router_begin note
+router_chan 0 9 1 0
+router_end
+router_add
+
+router_begin prog
+router_chan 0 9 1 0
+router_end
+router_add
+
+router_begin cc
+router_chan 0 9 1 0
+router_end
+router_add
+
+router_begin pbend
+router_chan 0 9 1 0
+router_end
+router_add
+
+router_begin cpress
+router_chan 0 9 1 0
+router_end
+router_add
+
+router_begin kpress
+router_chan 0 9 1 0
+router_end
+router_add
+
