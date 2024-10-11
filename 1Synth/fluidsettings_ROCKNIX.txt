@@ -22,11 +22,3 @@ prog 0 0
 #gain 0.0 to 10.0 (default:0.2)
 gain 1.0
 
-
-#reverb room-size 0.0-1.0 (default: 0.5)
-set synth.reverb.room-size 0.8
-
-
-#reverb width 0.0-100.0 (default: 0.8)
-set synth.reverb.width 20.0
-
